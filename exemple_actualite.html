@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exemple — affichage de l'actualité</title>
+<style>
+  body{font-family:Arial,Helvetica,sans-serif;max-width:880px;margin:24px auto;padding:0 16px;color:#2b2b2b;line-height:1.6}
+  h1{font-size:22px;color:#1f2a37}h2{font-size:17px;color:#4a6a8a;margin-top:28px}
+  .frise{list-style:none;padding:0;border-left:2px solid #d5dce4;margin-left:8px}
+  .frise li{padding:4px 0 4px 16px}
+</style>
+<script>
+  window.ACTUALITE = {
+    url: 'https://ibkvyjlglwufxvzxnysa.supabase.co',
+    key: 'sb_publishable_xUfZHSOHf4TnBRRyzU_qJA_TcXIMSKX',
+    da:  'actualite-droit-assurances'
+  };
+</script>
+<script src="actualite.js" defer></script>
+</head>
+<body>
+<h1>Exemple d'intégration — DA actualite-droit-assurances</h1>
+
+<h2>1. Encart sous la vidéo (M1)</h2>
+<div data-actualite="ris-vote-pleniere" data-format="encart">
+  Le texte doit encore être voté en séance plénière du Parlement européen (date indicative : 11/11/2026).
+</div>
+
+<h2>2. Fiche « Où en est-on ? » (M4)</h2>
+<div data-actualite-module="M4" data-format="fiche">
+  Situation au 01/11/2026 : réforme Cat Nat en navette parlementaire ; transposition de Solvabilité II attendue au 29/01/2027.
+</div>
+
+<h2>3. Jalon de frise (M1)</h2>
+<ul class="frise">
+  <li>18/12/2025 — Accord politique</li>
+  <li>23/06/2026 — Vote en commission ECON</li>
+  <li><span data-actualite="ris-vote-pleniere" data-format="jalon">11/11/2026</span> — Vote en plénière</li>
+</ul>
+</body>
+</html>
