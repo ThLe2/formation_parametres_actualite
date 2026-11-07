@@ -31,3 +31,14 @@ Le texte écrit dans chaque élément reste affiché si la base ne répond pas.
 ## Mise à jour d'un statut
 
 Dans Supabase (Table Editor), modifier la ligne concernée : `statut`, `resultat`, `date_intervenue`, `verifie_le`. Les pages se mettent à jour au chargement suivant ; l'état précédent est conservé dans `parametres_actualite_journal`.
+
+## Repérage des contenus touchés par une valeur (`impact/`)
+
+`impact/impact_valeur.py` liste les pages publiées (QCM, exercices, corrigés, mémos, études de cas, évaluations) qui citent la valeur d'une clé, sous toutes ses écritures, ainsi que les valeurs dérivées déclarées dans `impact/compositions.json` (ex. 30 % = 12,8 % + 17,2 %). Lecture seule : il ne modifie ni la base ni les pages.
+
+```
+python3 impact/impact_valeur.py epargne_ps_taux_assurance_vie
+python3 impact/impact_valeur.py --valeur 0.172 --unite % --cle epargne_ps_taux_assurance_vie
+```
+
+Utilisé par la veille hebdomadaire pour chaque écart constaté. Périmètre : HTML et JS publiés sur GitHub Pages ; les PDF, Word, PowerPoint et vidéos ne sont pas lus.

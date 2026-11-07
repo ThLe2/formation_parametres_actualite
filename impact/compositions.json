@@ -1,0 +1,8 @@
+{
+  "_note": "Valeurs dérivées écrites en dur dans les contenus : somme de plusieurs clés. Quand l'une des clés bouge, la valeur dérivée est aussi cherchée. Ajouter une ligne par composition repérée.",
+  "compositions": [
+    {"nom": "PFU assurance vie (IR 12,8 % + PS 17,2 %)", "termes": ["av_taux_pfu_ir", "epargne_ps_taux_assurance_vie"], "unite": "%"},
+    {"nom": "PFU de droit commun (IR 12,8 % + PS 18,6 %)", "termes": ["epargne_pfu_taux_ir", "epargne_ps_taux_general"], "unite": "%"},
+    {"nom": "PFL après 8 ans + PS assurance vie (7,5 % + 17,2 %)", "termes": ["av_pfl_apres_8_ans", "epargne_ps_taux_assurance_vie"], "unite": "%"}
+  ]
+}
